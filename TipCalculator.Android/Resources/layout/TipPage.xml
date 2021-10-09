@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:padding="20dp"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+ 
+	<TextView
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="24dp"
+    	android:text="@string/layout_first_value" />
+	<EditText
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:inputType="number|numberDecimal"
+    	android:textSize="24dp"
+    	android:gravity="right"
+    	local:MvxBind="Text FirstValue" />
+    <TextView
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="24dp"
+    	android:text="@string/layout_second_value" />
+	<EditText
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:inputType="number"
+    	android:textSize="24dp"
+    	android:gravity="right"
+    	local:MvxBind="Text SecondValue" />
+    <TextView
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="24dp"
+        android:layout_marginTop="10dip"
+        android:text="@string/operation_prompt"
+    />
+    <EditText
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:inputType="textNoSuggestions"
+    	android:textSize="24dp"
+    	android:gravity="right"
+    	local:MvxBind="Text OperationValue" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24dp"
+        android:gravity="center"
+        local:MvxBind="Text Result"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+     <Button 
+        android:text="Historic" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:id="@+id/NavigateButton" />
+</LinearLayout>
