@@ -10,5 +10,11 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/second" />
+    <ListView 
+        android:id="@+id/historiclistview" 
+        android:layout_height="match_parent" 
+        android:layout_width="match_parent"> 
+    </ListView>  
+    
 
 </LinearLayout>

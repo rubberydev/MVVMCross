@@ -63,7 +63,7 @@ namespace TipCalculator.Core.ViewModels
             {
                 _operationValue = value;
                 RaisePropertyChanged(() => OperationValue);
-                Recalculate(value);
+                Calculate(value);
             }
         }
         public double Result
@@ -81,8 +81,9 @@ namespace TipCalculator.Core.ViewModels
             FirstValue = 0;
         }
 
-        private void Recalculate(string operation)
+        private void Calculate(string operation)
         {
+            
             switch (operation)
             {
 
