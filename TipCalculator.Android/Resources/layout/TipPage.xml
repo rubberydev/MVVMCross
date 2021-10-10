@@ -54,6 +54,15 @@
         local:MvxBind="Text Result"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24dp"
+        android:gravity="center"
+        local:MvxBind="Text ResultText"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
      <Button 
         android:text="Historic" 
         android:layout_width="match_parent" 

@@ -16,6 +16,7 @@ namespace TipCalculator.Core.ViewModels
         private string _operationValue;
         private int _secondValue;
         private double _result;
+        private string _resultText;
 
         public TipViewModel(ICalculationService calculationService)
         {
@@ -71,14 +72,19 @@ namespace TipCalculator.Core.ViewModels
             get => _result;
             set => SetProperty(ref _result, value);
         }
+        public string ResultText
+        {
+            get => _resultText;
+            set => SetProperty(ref _resultText, value);
+        }
 
-      
 
         public override async Task Initialize()
         {
             await base.Initialize();
 
             FirstValue = 0;
+            ResultText = "OK";
         }
 
         private void Calculate(string operation)
@@ -97,8 +103,13 @@ namespace TipCalculator.Core.ViewModels
                     Result = _calculationService.Substraction(FirstValue, SecondValue);
                     break;
                 case "div":
-                    Result = (double)_calculationService.Division(FirstValue, SecondValue);
-                    break;
+                    {
+
+                        Result = (double)_calculationService.Division(FirstValue, SecondValue);
+                        if (Result == 0)
+                            ResultText = "Division by Zero is not permited";
+                        break;
+                    }
                 case "mult":
                     Result = _calculationService.Multiplication(FirstValue, SecondValue);
                     break;

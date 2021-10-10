@@ -26,7 +26,7 @@ namespace TipCalculator.Android.Views
 			db.createDatabase();
 			Historial historicRegister = new Historial()
 			{
-				Register = $"Execution{DateTime.Now.ToString()}"
+				Register = $"Execution: {DateTime.Now.ToString()}"
 			};
 
 			db.insertIntoTable(historicRegister);
@@ -44,10 +44,6 @@ namespace TipCalculator.Android.Views
                 {
 					executionList.Add(item);
                 }
-
-
-				if (executionList.Count == 0)
-					executionList.Add("You must do at least one operation... back!");
 
 
 				StartActivity(typeof(HistoricActivity));
