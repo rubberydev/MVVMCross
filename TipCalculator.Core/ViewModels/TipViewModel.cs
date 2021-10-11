@@ -90,7 +90,7 @@ namespace TipCalculator.Core.ViewModels
         private void Calculate(string operation)
         {
             
-            switch (operation)
+            switch (operation.ToLower())
             {
 
                 case "tip":
